@@ -72,7 +72,7 @@ SYMBOLS=$(cat symbols.txt)
 for ((i = 0; i < ${#SYMBOLS}; i++)); do
   SYMBOL="${SYMBOLS:$i:1}"
   convert $FOLDER_ICON \
-    \( -background transparent -fill '#1ca1dd' -font SF-Pro-Text-Regular -size 512x512 -size X340 -gravity center -geometry +0+40 label:$SYMBOL \) \
+    \( -background transparent -fill '#1ca1dd' -font SF-Pro-Text-Regular -size 512x512 -size X500 -gravity center -geometry +0+40 label:$SYMBOL \) \
     -compose over -composite build/$SYMBOL.png
 done
 
